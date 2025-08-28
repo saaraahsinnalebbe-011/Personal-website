@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fathima Saaraah - Portfolio</title>
+    <style>
+        /* General Styles */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background: #f9f9f9;
+            color: #333;
+        }
+        
+        header {
+            background: #1e3a8a;
+            color: #fff;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        header nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+        
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        
+        header nav a:hover {
+            color: #facc15;
+        }
+        
+        section {
+            padding: 4rem 10%;
+        }
+        
+        h1,
+        h2 {
+            margin-bottom: 1rem;
+            color: #1e3a8a;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        /* Specific Sections */
+        /* Home Section */
+        
+        .home {
+            padding: 6rem 10%;
+            background: #e0f2fe;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .home h1 {
+            font-size: 2.5rem;
+        }
+        
+        .home-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+            width: 100%;
+            max-width: 1100px;
+        }
+        
+        .home-content .text {
+            flex: 1;
+        }
+        
+        .home-content .text h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .home-content .image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .home-content .image img {
+            width: 300px;
+            /* adjust size */
+            height: 18rem;
+            border-radius: 50%;
+            /* makes it circular */
+            border: 5px solid #1e3a8a;
+            /* optional border */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        /* about Section */
+        
+        .about-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            flex-wrap: wrap;
+            /* makes it responsive */
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-text h2 {
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+        }
+        
+        .about-text p {
+            margin-bottom: 1rem;
+            color: #444;
+        }
+        
+        .about-image {
+            flex: 0;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .about-image img {
+            width: 250px;
+            height: 380px;
+            border-radius: 15px;
+            /* rounded corners */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        /* eduacation Section */
+        
+        .edu-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            flex-wrap: wrap;
+            /* makes it responsive */
+        }
+        
+        .edu-text {
+            flex: 1;
+        }
+        
+        .edu-text h2 {
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+        }
+        
+        .edu-text p {
+            margin-bottom: 1rem;
+            color: #444;
+        }
+        
+        .edu-image {
+            flex: -1;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .edu-image img {
+            width: 250px;
+            height: 430px;
+            border-radius: 15px;
+            margin-top: 35px;
+            /* rounded corners */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.7rem 1.5rem;
+            background: #1e3a8a;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        
+        .btn:hover {
+            background: #facc15;
+            color: #000;
+        }
+        
+        .education ul {
+            list-style: none;
+        }
+        
+        .education li {
+            background: #fff;
+            margin: 1rem 0;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+        /* Contact */
+        
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            margin: auto;
+        }
+        
+        input,
+        textarea {
+            margin: 0.5rem 0;
+            padding: 0.7rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        button {
+            padding: 0.7rem;
+            border: none;
+            background: #1e3a8a;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background: #facc15;
+            color: #000;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #1e3a8a;
+            color: #fff;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#goals">Career Goals</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="home">
+        <div class="home-content">
+            <div class="text">
+                <h1>Fathima Saaraah</h1>
+                <p>MBA (UK) | BSc Computer Science | Aspiring Data Analyst</p>
+                <a href="#about" class="btn">Learn More</a>
+            </div>
+            <div class="image">
+                <img src="graduation.jpg" />
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="about-section">
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>
+                    I am <strong>Fathima Saaraah Sinnalebbe</strong>, currently pursuing a Master of Business Administration (MBA) at London Metropolitan University.
+                </p>
+                <p>
+                    I am the only child of my parents, whom I deeply cherish. Their guidance and support have been shaping my personal and professional values since Day 01
+                </p>
+                <p>
+                    I completed my schooling in the UAE at The Westminster School and later graduated with a <strong>BSc in Computer Science with Distinction</strong> from Heriot-Watt University. My academic journey has shaped my values of empathy, responsibility,
+                    truthfulness, and resilience.
+                </p>
+                <p>
+                    Alongside my studies, I have experience teaching Mathematics and Science, delivering online classes for IGCSE and A-Level groups. At present, I am balancing my MBA studies, professional growth, and the responsibilities of being a mother to my one-year-old
+                    son.
+                </p>
+            </div>
+            <div class="about-image">
+                <img src="aboutme.jpg">
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="edu-section">
+            <div class="edu-text">
+                <h2>Education</h2>
+                <ul>
+                    <li><strong>MBA (Ongoing)</strong> – London Metropolitan University <br>September 2024 - Present<br> </li>
+                    <li><strong>BSc in Computer Science</strong> – Heriot-Watt University, Dubai <br>September 2019 - July 2022<br> <br>Distinction<br></li>
+                    <li><strong>IGCSE and A-Levels</strong> – The Westminster School, Dubai <br>September 2014 - June 2019<br> <br>A-Level: 1A* 1A 2B <br>IGCSE: 2A* 3A 2B<br><br></li>
+                </ul>
+            </div>
+            <div class="edu-image">
+                <img src="education.jpg">
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Goals Section -->
+    <section id="goals">
+        <h2>Career Goals</h2>
+        <p><strong>Short-Term:</strong> Excel as a teacher and gain leadership exposure.</p>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <p><strong>Short-Term:</strong> Excel as a teacher and gain leadership exposure.</p>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="5" placeholder="Your Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p> 2025 Fathima Saaraah | Portfolio</p>
+    </footer>
+
+</body>
+
+</html>
+
+</html>
